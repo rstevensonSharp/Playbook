@@ -16,6 +16,11 @@ public class GizmoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Quit application on escape
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
+
         //Select an object if gizmo is inactive
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
